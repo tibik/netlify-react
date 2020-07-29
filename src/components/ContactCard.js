@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import '../style.css'
 
 const ContactCard = (props) => {
   const { avatar, name, email, age } = props;
