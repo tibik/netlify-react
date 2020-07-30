@@ -1,5 +1,6 @@
 .contact-card {
   display: flex;
+  align-items: center;
   padding: 10px;
   color: #ffffff;
   background-color: rgb(42, 84, 104);
@@ -7,8 +8,14 @@
   box-shadow: 10px 10px 25px -16px rgba(0, 0, 0, 0.75);
   border-radius: 10px;
   max-width: 500px;
-  max-height: 125px;
+  /* max-height: 125px; */
   margin-bottom: 10px;
+}
+
+.contact-card img {
+  display: block;
+  width: 128px;
+  height: 128px;
 }
 
 .contact-card p {

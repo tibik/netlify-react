@@ -3,6 +3,7 @@ import ContactCard from "./components/ContactCard";
 
 const App = () => {
   const [contacts, setContacts] = useState([]);
+  const [apiMessage, setApiMessage] = useState('');
 
   const fetchUsers = async () => {
     const response = await fetch("https://randomuser.me/api/?results=3");
@@ -11,8 +12,18 @@ const App = () => {
     setContacts(data.results);
   };
 
+  const fetchApiData  = async () => {
+    const response = await fetch("http://localhost:5000/api/v1");
+    const data = await response.json();
+
+    console.log('data.message :>> ', data.message);
+
+    setApiMessage(data.message);
+  }
+
   useEffect(() => {
     fetchUsers();
+    fetchApiData();
   }, []);
 
   return (
@@ -24,6 +35,7 @@ const App = () => {
           name={`${contact.name.first} ${contact.name.last}`}
           email={contact.email}
           age={contact.dob.age}
+          message={apiMessage}
         />
       ))}
     </>

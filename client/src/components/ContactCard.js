@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import './ContactCard.css'
 
 const ContactCard = (props) => {
-  const { avatar, name, email, age } = props;
+  const { avatar, name, email, age, message } = props;
 
   const [showAge, setShowAge] = useState(true);
 
@@ -18,6 +18,7 @@ const ContactCard = (props) => {
         <p>Email: {email}</p>
         <button onClick={handleButtonClick}>Toggle Age</button>
         {showAge ? <p>Age: {age}</p> : null}
+        <p>Message: {message}</p>
       </div>
     </div>
   );
