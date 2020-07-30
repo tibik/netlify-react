@@ -16,8 +16,6 @@ const App = () => {
     const response = await fetch("http://localhost:5000/api/v1");
     const data = await response.json();
 
-    console.log('data.message :>> ', data.message);
-
     setApiMessage(data.message);
   }
 
