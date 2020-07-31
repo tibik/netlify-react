@@ -15,7 +15,7 @@ const ContactCard = (props) => {
       <img src={avatar} alt="profile" />
       <div className="user-details">
         <p>{name}</p>
-        <p>Email: {email}</p>
+        <p>Email addres: {email}</p>
         <button onClick={handleButtonClick}>Toggle Age</button>
         {showAge ? <p>Age: {age}</p> : null}
         <p>Message: {message}</p>
